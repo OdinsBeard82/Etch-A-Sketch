@@ -10,12 +10,9 @@ for (let i = 0; i < 16; i++) {
     col.classList.add("col");
     row.appendChild(col);
 
-    col.addEventListener("mousedown", () => {
+    col.addEventListener("mouseenter", () => {
       col.classList.add("hover");
     });
 
-    col.addEventListener("mouseup", () => {
-      col.classList.remove("hover");
-    });
   }
 }
