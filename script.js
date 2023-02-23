@@ -9,5 +9,13 @@ for (let i = 0; i < 16; i++) {
     const col = document.createElement("div");
     col.classList.add("col");
     row.appendChild(col);
+
+    col.addEventListener("mousedown", () => {
+      col.classList.add("hover");
+    });
+
+    col.addEventListener("mouseup", () => {
+      col.classList.remove("hover");
+    });
   }
 }
