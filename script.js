@@ -20,7 +20,10 @@ function createGrid(size) {
 }
 
 function resetGrid() {
-  createGrid(16);
+  let newSize = prompt("Enter new grid size");
+  if (newSize !== null && newSize !== '' && newSize <= 100) {
+    createGrid(parseInt(newSize));
+  }
 }
 
 createGrid(16);
