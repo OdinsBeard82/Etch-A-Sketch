@@ -13,12 +13,11 @@ function createGrid(size) {
       row.appendChild(col);
 
       col.addEventListener("mouseenter", () => {
-        col.classList.add("hover");
+        col.style.backgroundColor = getRandomColor();
       });
     }
   }
 }
-
 function resetGrid() {
   let newSize = prompt("Enter new grid size");
   if (newSize !== null && newSize !== '' && newSize <= 100) {
@@ -26,7 +25,25 @@ function resetGrid() {
   }
 }
 
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 createGrid(16);
 
 const restartButton = document.querySelector(".restart");
 restartButton.addEventListener("click", resetGrid);
+const refreshButton = document.querySelector(".refresh");
+
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener("click", refreshPage)
+
+
