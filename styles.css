@@ -1,47 +1,63 @@
-body {
-  margin: 1;
-  padding: 0;
-
+.container1 {
+  background-color: #d9d9d9;
+  border: 2px solid #999999;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px #999999;
+  height: 80px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: right;
+  width: 300px;
+  font-size: 30px;
 }
 
-
-
-#grid-container {
-  background-color: white;
+.container {
+  margin: 10px auto;
+  width: 300px;
 }
 
-.row {
-  display: flex;
-  align-items: center;
+button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #999999;
+  color: #333333;
+  cursor: pointer;
+  font-size: 20px;
+  height: 50px;
+  margin: 5px;
+  outline: none;
+  width: 50px;
 }
 
-.col {
-  width: 1px;
-  border: 1px solid black;
-  padding: 15px; 
+button:hover {
+  background-color: #e6e6e6;
 }
 
-.restart {
-  height: 120px;
-  width: 120px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 10px;
+button:active {
+  box-shadow: 0px 0px 2px #999999;
 }
 
-.refresh {
-  height: 120px !important;
-  width: 120px !important;
-  background-color: #bbb !important;
-  border-radius: 50% !important;
-  display: inline-block !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  margin: 10px !important;
+.equals {
+  height: 110px;
 }
 
+.answer {
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 400px) {
+  button {
+      font-size: 16px;
+      height: 40px;
+      margin: 3px;
+      width: 40px;
+  }
+
+  .equals {
+      height: 95px;
+  }
+}
